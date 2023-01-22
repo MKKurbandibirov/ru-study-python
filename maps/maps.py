@@ -24,10 +24,7 @@ class MapExercise:
 
             return 0
 
-        result = []
-        for i_res in list(map(rating_counter, list_of_movies)):
-            if i_res != 0:
-                result.append(i_res)
+        result = list(filter(lambda x: x != 0, list(map(rating_counter, list_of_movies))))
 
         return sum(result) / len(result)
 
